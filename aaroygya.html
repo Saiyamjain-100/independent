@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="en-GB">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icons8-coronavirus-64.png" type="image/x-icon">
+
+
+    <title>Covid Tracker</title>
+    <meta name='robots' content='max-image-preview:large' />
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <link rel="alternate" type="application/rss+xml" title="Aarogya Setu &raquo; Feed" href="https://www.aarogyasetu.gov.in/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="Aarogya Setu &raquo; Comments Feed" href="https://www.aarogyasetu.gov.in/comments/feed/" />
+    <script>
+        window._wpemojiSettings = {
+            "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/",
+            "ext": ".png",
+            "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/",
+            "svgExt": ".svg",
+            "source": {
+                "concatemoji": "https:\/\/www.aarogyasetu.gov.in\/wp-includes\/js\/wp-emoji-release.min.js"
+            }
+        };
+        ! function(e, a, t) {
+            var n, r, o, i = a.createElement("canvas"),
+                p = i.getContext && i.getContext("2d");
+
+            function s(e, t) {
+                var a = String.fromCharCode;
+                p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, e), 0, 0);
+                e = i.toDataURL();
+                return p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, t), 0, 0), e === i.toDataURL()
+            }
+
+            function c(e) {
+                var t = a.createElement("script");
+                t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t)
+            }
+            for (o = Array("flag", "emoji"), t.supports = {
+                    everything: !0,
+                    everythingExceptFlag: !0
+                }, r = 0; r < o.length; r++) t.supports[o[r]] = function(e) {
+                if (!p || !p.fillText) return !1;
+                switch (p.textBaseline = "top", p.font = "600 32px Arial", e) {
+                    case "flag":
+                        return s([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) ? !1 : !s([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819]) && !s([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]);
+                    case "emoji":
+                        return !s([55357, 56424, 8205, 55356, 57212], [55357, 56424, 8203, 55356, 57212])
+                }
+                return !1
+            }(o[r]), t.supports.everything = t.supports.everything && t.supports[o[r]], "flag" !== o[r] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[o[r]]);
+            t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function() {
+                t.DOMReady = !0
+            }, t.supports.everything || (n = function() {
+                t.readyCallback()
+            }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function() {
+                "complete" === a.readyState && t.readyCallback()
+            })), (n = t.source || {}).concatemoji ? c(n.concatemoji) : n.wpemoji && n.twemoji && (c(n.twemoji), c(n.wpemoji)))
+        }(window, document, window._wpemojiSettings);
+
+    </script>
+    <style>
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+
+    </style>
+    <link rel='stylesheet' id='wsl-widget-css' href='https://www.aarogyasetu.gov.in/wp-content/plugins/wordpress-social-login/assets/css/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-pagenavi-css' href='https://www.aarogyasetu.gov.in/wp-content/plugins/wp-pagenavi/pagenavi-css.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='setu-common-css' href='https://www.aarogyasetu.gov.in/wp-content/themes/setu/assets/css/common.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='setu-fontawesome-css' href='https://www.aarogyasetu.gov.in/wp-content/themes/setu/assets/css/font-awesome.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='setu-owlslider-css' href='https://www.aarogyasetu.gov.in/wp-content/themes/setu/assets/css/owl.carousel.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='setu-fancy-css' href='https://www.aarogyasetu.gov.in/wp-content/themes/setu/assets/css/jquery.fancybox.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='setu-style-css' href='https://www.aarogyasetu.gov.in/wp-content/themes/setu/style.css' type='text/css' media='all' />
+    <script src='https://www.aarogyasetu.gov.in/wp-includes/js/jquery/jquery.min.js' id='jquery-core-js'></script>
+    <script src='https://www.aarogyasetu.gov.in/wp-includes/js/jquery/jquery-migrate.min.js' id='jquery-migrate-js'></script>
+    <link rel="https://api.w.org/" href="https://www.aarogyasetu.gov.in/wp-json/" />
+    <link rel="alternate" type="application/json" href="https://www.aarogyasetu.gov.in/wp-json/wp/v2/pages/193" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.aarogyasetu.gov.in/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.aarogyasetu.gov.in/wp-includes/wlwmanifest.xml" />
+    <link rel="canonical" href="https://www.aarogyasetu.gov.in/" />
+    <link rel='shortlink' href='https://www.aarogyasetu.gov.in/' />
+    <link rel="alternate" type="application/json+oembed" href="https://www.aarogyasetu.gov.in/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.aarogyasetu.gov.in%2F" />
+    <link rel="alternate" type="text/xml+oembed" href="https://www.aarogyasetu.gov.in/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.aarogyasetu.gov.in%2F&#038;format=xml" />
+    <link rel="alternate" href="https://www.aarogyasetu.gov.in/as/" hreflang="as" />
+    <link rel="alternate" href="https://www.aarogyasetu.gov.in/bn/" hreflang="bn" />
+    <link rel="alternate" href="https://www.aarogyasetu.gov.in/gu/" hreflang="gu" />
+    <link rel="alternate" href="https://www.aarogyasetu.gov.in/kn/" hreflang="kn" />
+    <link rel="alternate" href="https://www.aarogyasetu.gov.in/ml/" hreflang="ml" />
+    <link rel="alternate" href="https://www.aarogyasetu.gov.in/mr/" hreflang="mr" />
+    <link rel="alternate" href="https://www.aarogyasetu.gov.in/pa/" hreflang="pa" />
+    <link rel="alternate" href="https://www.aarogyasetu.gov.in/ta/" hreflang="ta" />
+    <link rel="alternate" href="https://www.aarogyasetu.gov.in/te/" hreflang="te" />
+    <link rel="alternate" href="https://www.aarogyasetu.gov.in/hi/" hreflang="hi" />
+    <link rel="alternate" href="https://www.aarogyasetu.gov.in/" hreflang="en" />
+    <link rel="alternate" href="https://www.aarogyasetu.gov.in/or/" hreflang="or" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@SetuAarogya">
+    <meta name="twitter:creator" content="@SetuAarogya">
+    <meta name="twitter:title" content="Aarogya Setu">
+    <meta name="twitter:description" content="AarogyaSetu App is developed by the Government of India to connect essential health services with the Indian people in our combined fight against COVID-19">
+    <meta name="twitter:image" content="https://aarogyasetu.gov.in/wp-content/themes/setu/assets/images/aarogya_logo.png">
+
+    <meta property="og:url" content="https://aarogyasetu.gov.in/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Aarogya Setu" />
+    <meta property="og:description" content="AarogyaSetu App is developed by the Government of India to connect essential health services with the Indian people in our combined fight against COVID-19" />
+    <meta property="og:image" content="https://aarogyasetu.gov.in/wp-content/themes/setu/assets/images/aarogya_logo.png" />
+    <meta property="og:image:width" content="https://aarogyasetu.gov.in/wp-content/themes/setu/assets/images/aarogya_logo.png" />
+
+
+    <script>
+        function fb_click(e) {
+            var href = e.getAttribute("data-href");
+            var title = e.getAttribute("data-title");
+            var target = 'http://www.facebook.com/sharer.php?u=' + encodeURIComponent(href) + '&t=' + encodeURIComponent(title);
+            window.open(target, 'sharer', 'toolbar=0,status=0,width=626,height=436');
+            return false;
+        }
+
+        function tweet_click(e) {
+            var url = e.getAttribute("data-href");
+            var text = e.getAttribute('data-title');
+            var target = 'https://twitter.com/share?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text) + '&hashtags=AarogyaSetu';
+            //+'&t='+encodeURIComponent(t)
+            window.open(target, 'sharer', 'toolbar=0,status=0,width=626,height=436');
+            return false;
+        }
+
+    </script>
+    <style>
+        .recentcomments a {
+            display: inline !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+    </style>
+</head>
+
+<body class="home page-template page-template-templates page-template-front-page page-template-templatesfront-page-php page page-id-193 wp-embed-responsive fixed">
+
+    <header class="header">
+        <div class="accessbility_header" style="background-color: blue">
+            <div class="container">
+                <!--<ul></ul>-->
+                <ul class="access_menu">
+                    <li class="ivrs"><a href="tel:1921"><i></i> IVRS - 1921</a></li>
+                    <li class="skip"><a class="skipmain" href="#skipmain">Skip to main content</a></li>
+                    <li class="accesbility-block">
+                        <a href="#" aria-expanded="false">
+                            <i class="fa fa-wheelchair-alt"></i>
+                        </a>
+                        <div class="accesbility_list">
+                            <a href="javascript:void(0);" title="Increase font size" onClick="set_font_size('increase')">A<sup>+</sup></a>
+                            <a href="javascript:void(0);" title="Reset font size" onClick="set_font_size('')">A</a>
+                            <a href="javascript:void(0);" title="Decrease font size" onClick="set_font_size('decrease')">A<sup>-</sup></a>
+                            <a href="javascript:void(0);" onClick="chooseStyle('change', 60);" title="Dark"><span class="dark">A</span></a>
+                            <a href="javascript:void(0);" onClick="chooseStyle('none', 60);" title="Light"><span class="light">A</span></a>
+                        </div>
+                    </li>
+                    <!-- <li><a href="#" class="screen_reader">Screen Reader</a></li>-->
+                </ul>
+            </div>
+        </div>
+        <div class="header_wrap" style="align-content: center ; text-align: center">
+            <div class="container header-main">
+                <a href="/" class="logo"><img src="./icons8-coronavirus-64-new.png" alt="" title=""><span style="align-content: center ; font-size: 30px ">Covid Tracker</span></a>
+                <div class="menu_wrap">
+                    <div class="header_block">
+
+                        <ul class="menu">
+                            <li><a href="#how">Prevention</a></li>
+                            <li><a href="#hhh">Symptoms</a></li>
+                            <li><a href="#update">COVID Updates</a></li>
+                            <li><a href="#document">Help</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="mobile-menu"><i class="fa fa-bars" aria-hidden="true"></i></div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </header>
+
+
+
+    <!-- Main section -->
+    <div class="main-section">
+        <div class="owl-carousel home-banner">
+
+            <div> <img src="./image3.jpg" height="368px" id="_NYdfdKcBSJzOm7Ax" onclick="javascript:window.open('https://cbpssubscriber.mygov.in/aff/NYdfdKcBSJzOm7Ax')" style="cursor:pointer" onload="javascript:(function(){if(typeof _done == 'undefined' || !_done){this.setAttribute('src', this.getAttribute('src')+'?'+Math.floor((Math.random() * 100) + 1)); _done=true;}}).call(this)"></div>
+            <div><a href="https://www.cowin.gov.in/home" target="_blank"><img src="https://www.aarogyasetu.gov.in/wp-content/uploads/2021/04/mygov-10000000001946816780.jpg" alt="Vaccination"></a></div>
+            <div><a href="https://www.cowin.gov.in/home" target="_blank"><img src="coronavirus-prevention-disinfection-and-sanitization-tips.webp" height="368px" alt="Vaccination"></a></div>
+
+
+
+        </div>
+        <!-- covid positive status -->
+        <div id="how" class="know_status">
+            <div class="container">
+                <h2>Prevention From Covid-19</h2>
+                <div class="covid-steps">
+                    <div><a href="preventions.html" target="_blank"><img src="coronavirus-prevention-disinfection-and-sanitization-tips.webp" height="400px" width="100%" alt="Vaccination"></a></div>
+                    <div class="step_block">
+                        <h4>Wash your hand after a regular interval of time </h4>
+                    </div>
+                    <div class="step_block">
+                        <h4>Cover your Face before Sneezig </h4>
+                    </div>
+                    <div class="step_block">
+                        <h4>Do not touch the face, mouth , nose without washing hand </h4>
+                    </div>
+                    <div class="step_block">
+                        <h4>Maintaing social distance</h4>
+                    </div>
+                    <div class="step_block">
+                        <h4>Wear Mask If moving out for work</h4>
+                    </div>
+
+                </div>
+                <p class="disclaimer">Note: Vaccinaton is available now all of us must get vaccinated as soon as possible and after vaccination also we have to follow the rule and regulation by given goverment.</p>
+            </div>
+        </div>
+        <div id="hhh" class="know_status">
+            <div class="container">
+                <h2>Symptoms From Covid-19</h2>
+                <div class="covid-steps">
+                    <div><a href="symptoms.html" target="_blank"><img src="coronavirus-symptoms.jpg" style="align-content: center; justify-content: center; text-align: center; align-items: center" height=" 400px" width="1000px" alt="Vaccination"></a></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="update" class="across_india">
+            <div class="container">
+                <div class="text-center across_inner">
+                    <h2>COVID-19 Across India</h2>
+                    <span class="sub_text date_time updated_on">Updated </span>
+                    <div class="covid_dashboard">
+                        <div class="confirm_case">
+                            <div class="cbox"><span class="total_covid_cases"></span> Total Cases<br>3.03 Cr</div>
+                        </div>
+                        <div class="active_case">
+                            <div class="cbox"><span class="active_covid_cases"></span> Active <br> --</div>
+                        </div>
+                        <div class="recoverd_case">
+                            <div class="cbox"><span class="cured_discharged"></span> Discharged <BR> 2.94 Cr</div>
+                        </div>
+                        <div class="death_case">
+                            <div class="cbox"><span class="death"></span> Deaths <BR> 3.98 L</div>
+                        </div>
+                        <span class="vblock">
+                            <link sr class="view_state" target="_blank">View Statewise Status</a>
+                        </span>
+                    </div>
+
+
+                    <div id="document">
+                        <div class="container">
+                            <h2>Helping Hands</h2>
+                            <div class="doc_wrap">
+                                <div class="doc_media"><img src="https://www.aarogyasetu.gov.in/wp-content/themes/setu/assets/images/document.png" alt="" /></div>
+                                <div class="adv_list">
+                                    <div class="info_item">
+                                        <i></i>
+                                        <div class="info-text">
+                                            <a target="_blank" href="https://chat.whatsapp.com/ElIhTEQlZgGA9YrPMswgC1">Helping Hands the Group 1 for all type of help</a>
+                                            <small>May 3, 2020</small>
+                                        </div>
+                                    </div>
+                                    <div class="info_item">
+                                        <i></i>
+                                        <div class="info-text">
+                                            <a target="_blank" href="https://chat.whatsapp.com/FvyypW4dsAAAdEjGU4i1aD">Helping Hands the Group 2 for all type of help</a>
+                                            <small>May 3, 2020</small>
+                                        </div>
+                                    </div>
+                                    <div class="info_item">
+                                        <i></i>
+                                        <div class="info-text">
+                                            <a target="_blank" href="https://chat.whatsapp.com/ElIhTEQlZgGA9YrPMswgC1">Helping Hands the Group 3 for all type of help</a>
+                                            <small>May 3, 2020</small>
+                                        </div>
+                                    </div>
+                                    <div class="info_item">
+                                        <i></i>
+                                        <div class="info-text">
+                                            <a target="_blank" href="https://chat.whatsapp.com/ElIhTEQlZgGA9YrPMswgC1">Helping Hands the Group 4 for all type of help</a>
+                                            <small>May 3, 2020</small>
+                                        </div>
+                                    </div>
+                                    <div class="info_item">
+                                        <i></i>
+                                        <div class="info-text">
+                                            <a target="_blank" href="https://chat.whatsapp.com/ElIhTEQlZgGA9YrPMswgC1">Helping Hands the Group 5 for all type of help</a>
+                                            <small>May 3, 2020</small>
+                                        </div>
+                                    </div>
+                                    <div class="info_item">
+                                        <i></i>
+                                        <div class="info-text">
+                                            <a target="_blank" href="https://chat.whatsapp.com/ElIhTEQlZgGA9YrPMswgC1">Helping Hands the Group 6 for all type of help</a>
+                                            <small>May 3, 2020</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="info_item">
+                                        <i></i>
+                                        <div class="info-text">
+                                            <a target="_blank" href="https://chat.whatsapp.com/ElIhTEQlZgGA9YrPMswgC1">Helping Hands the Group 7 for all type of help</a>
+                                            <small>May 3, 2020</small>
+                                        </div>
+                                    </div>
+                                    <div class="info_item">
+                                        <i></i>
+                                        <div class="info-text">
+                                            <a target="_blank" href="https://chat.whatsapp.com/ElIhTEQlZgGA9YrPMswgC1">Helping Hands the Group 8 for all type of help</a>
+                                            <small>May 3, 2020</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="view-all" href="/documents/">View All</a>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <!-- Main section End  -->
+
+
+                <footer class="footer" style="height: 1px; background-color: aqua">
+                    <div class="footer-top" style=" background-color: blue">>
+                        <div class="container footer-flex">
+                            <div class="copyright">
+                                <div class="copyright_text">
+                                    <p>All the content are updated and maintained by our team , all the right are reserved to Saiyam jain </p>
+                                    <div class="ser_name">
+                                        <span>Last Updated:</span>June 29, 2020 at 11:59 pm -
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="footer_right">
+                                <div class="menu-footer-menu-container">
+                                    <ul id="menu-footer-menu" class="footer-menu">
+                                        <li id="menu-item-713" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-713"><a href="https://www.aarogyasetu.gov.in/privacy-policy/">Privacy Policy</a></li>
+                                        <li id="menu-item-733" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-733"><a href="https://www.aarogyasetu.gov.in/faq/">FAQ’s</a></li>
+                                        <li id="menu-item-993" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-993"><a href="https://www.aarogyasetu.gov.in/technical-faqs/">Technical FAQ’s</a></li>
+                                        <li id="menu-item-743" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-743"><a href="https://www.aarogyasetu.gov.in/terms-conditions/">Terms &#038; Conditions</a></li>
+                                    </ul>
+                                </div>
+                                <div class="footer_socail">
+                                    <div class="social_links">
+                                        <a class="facebook_icon" target="_blank" href="https://www.facebook.com/AarogyaSetu/" title="Aarogya Setu Facebook"><i></i></a>
+                                        <a class="twitter_icon" target="_blank" href="https://twitter.com/SetuAarogya/" title="Aarogya Setu Twitter"><i></i></a>
+                                        <a class="corona_icon" target="_blank" href="https://www.mygov.in/covid-19" title="MyGov COVID 19"><i></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </footer>
+                <script src='https://www.aarogyasetu.gov.in/wp-content/themes/setu/assets/js/jquery-3.4.1.min.js' id='jquerylib-js'></script>
+                <script src='https://www.aarogyasetu.gov.in/wp-content/themes/setu/assets/js/font-size.js' id='font-size-js'></script>
+                <script src='https://www.aarogyasetu.gov.in/wp-content/themes/setu/assets/js/swithcer.js' id='swithcer-js'></script>
+                <script src='https://www.aarogyasetu.gov.in/wp-content/themes/setu/assets/js/owl.carousel.min.js' id='owl-carousel-js'></script>
+                <script src='https://www.aarogyasetu.gov.in/wp-content/themes/setu/assets/js/jquery.counterup.min.js' id='counterup-js'></script>
+                <script src='https://www.aarogyasetu.gov.in/wp-content/themes/setu/assets/js/waypoints.min.js' id='waypoints-js'></script>
+                <script src='https://www.aarogyasetu.gov.in/wp-content/themes/setu/assets/js/jquery.fancybox.min.js' id='fancybox-js'></script>
+                <script src='https://www.aarogyasetu.gov.in/wp-content/themes/setu/assets/js/custom.js' id='custom-js'></script>
+                <script src='https://www.aarogyasetu.gov.in/wp-includes/js/wp-embed.min.js' id='wp-embed-js'></script>
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172763186-1"></script>
+                <script>
+                    window.dataLayer = window.dataLayer || [];
+
+                    function gtag() {
+                        dataLayer.push(arguments);
+                    }
+                    gtag('js', new Date());
+
+                    gtag('config', 'UA-172763186-1');
+
+                </script>
+</body>
+
+</html>
+<script>
+    jQuery(document).ready(function($) {
+        var api_url = '/wp-content/uploads/sitedata.json';
+        $.getJSON(api_url, function(data) {
+            var aarogya_app_download = ind_numbers(data.mygov_data.aarogya_app_download);
+            $('.aarogya_app_download').text(aarogya_app_download).counterUp({
+                delay: 10,
+                time: 1000
+            });
+            //alert(aarogya_app_download);
+
+            var total_samples_tested = ind_numbers(data.mygov_data.total_samples_tested);
+            $('.total_samples_tested').text(total_samples_tested).counterUp({
+                delay: 10,
+                time: 1000
+            });
+
+            var last_sample_tested_date = data.mygov_data.last_sample_tested_date;
+            $('.last_sample_tested_date').text(last_sample_tested_date);
+
+            var samples_tested_today = ind_numbers(data.mygov_data.samples_tested_today);
+            $('.samples_tested_today').text(samples_tested_today).counterUp({
+                delay: 10,
+                time: 1000
+            });
+
+
+            //var updated_on = data.mygov_data.as_on;
+            var updated_on = data.mygov_data.updated_on;
+            var add = 19800;
+            //var x = convert(+updated_on + +add);
+            var x = convert(updated_on);
+            $('.updated_on').text(x);
+
+            var total_covid_cases = ind_numbers(data.mygov_data.total_covid_cases);
+            $('.total_covid_cases').text(total_covid_cases).counterUp({
+                delay: 10,
+                time: 1500
+            });
+
+            var active_covid_cases = ind_numbers(data.mygov_data.active_covid_cases);
+            $('.active_covid_cases').text(active_covid_cases).counterUp({
+                delay: 10,
+                time: 1500
+            });
+
+            var cured_discharged = ind_numbers(data.mygov_data.cured_discharged);
+            $('.cured_discharged').text(cured_discharged).counterUp({
+                delay: 10,
+                time: 1500
+            });
+
+            var death = ind_numbers(data.mygov_data.death);
+            $('.death').text(death).counterUp({
+                delay: 10,
+                time: 1500
+            });
+
+
+            //aarogya_app_download total_samples_tested last_sample_tested_date samples_tested_today last_sample_tested_date
+
+            //updated_on total_covid_cases cured_discharged death
+
+
+
+        });
+
+        var json = {};
+
+        function ind_numbers(num) {
+            x = num.toString();
+            var lastThree = x.substring(x.length - 3);
+            var otherNumbers = x.substring(0, x.length - 3);
+            if (otherNumbers != '')
+                lastThree = ',' + lastThree;
+            var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+            return res;
+        }
+
+        function convert(unixtimestamp) {
+            // Months array
+            var months_arr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            // Convert timestamp to milliseconds
+            var date = new Date(unixtimestamp * 1000);
+            // Year
+            var year = date.getFullYear();
+            // Month
+            var month = months_arr[date.getMonth()];
+            // Day
+            var day = date.getDate();
+            // Hours
+            var hours = date.getHours();
+            // Minutes
+            var minutes = "0" + date.getMinutes();
+            // Seconds
+            var seconds = "0" + date.getSeconds();
+            // Display date time in MM-dd-yyyy h:m:s format
+            var convdataTime = day + '-' + month + '-' + year + ' ' + hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+            return convdataTime;
+        }
+
+        jQuery(".home-banner").owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: true,
+            autoplayHoverPause: true,
+            nav: true,
+            navText: ['<i class="fa fa-chevron-circle-left" aria-hidden="true"></i>', '<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>']
+        });
+
+    });
+
+</script>
